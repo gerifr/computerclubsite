@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-import { sendEmailVerificationgetAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import {  getAuth, sendEmailVerification, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -49,6 +49,14 @@ function showMessage(message, divId){
             lastName:lastName
         };
         showMessage('Account Created Successfully', 'signUpMessage');
+
+        const auth = getAuth();
+        sendEmailVerification(auth.currentUser)
+        .then(() => {
+
+            alert('Verification sent');
+        });
+
         const docRef=doc(db, "users", user.uid);
         setDoc(docRef,userData)
         .then(()=>{

@@ -3,13 +3,7 @@ import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/fire
 import{getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAxCwtWGW4YLIgFBRHBdsTACrgbhjQm5o0",
-    authDomain: "comptuerclubofarniko.firebaseapp.com",
-    projectId: "comptuerclubofarniko",
-    storageBucket: "comptuerclubofarniko.appspot.com",
-    messagingSenderId: "137356701106",
-    appId: "1:137356701106:web:88230a264ec1429a4b88ab",
-    measurementId: "G-YX62GP0SG1"
+   //// APi key config ask from genius if u wanna
   };
  
   // Initialize Firebase

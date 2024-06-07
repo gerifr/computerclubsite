@@ -1,9 +1,15 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 import{getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
-
+import * as functions from "firebase-functions"; 
 const firebaseConfig = {
-   //// APi key config ask from genius if u wanna
+    apiKey: require("api")(functions.config().api.key),
+    authDomain: "comptuerclubofarniko.firebaseapp.com",
+    projectId: "comptuerclubofarniko",
+    storageBucket: require("api")(functions.config().api.bucket),
+    messagingSenderId: "137356701106",
+    appId: require("api")(functions.config().api.id),
+    measurementId: require("api")(functions.config().api.measurid)
   };
  
   // Initialize Firebase

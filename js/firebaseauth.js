@@ -53,7 +53,6 @@ function showMessage(message, divId){
         const auth = getAuth();
         sendEmailVerification(auth.currentUser)
         .then(() => {
-
             alert('Verification sent');
         });
 

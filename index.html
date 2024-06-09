@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/firebaseauth.js"></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf9VfQpAAAAAIUSqRRo0lPHSjem5r8JOde7XHpM"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="container" id="signup" style="display:none;">
@@ -33,7 +35,7 @@
             <input type="password" id="rPassword"  placeholder="Password" >
             <label for="rPassword">Password</label>
         </div>
-       <button class="btn" id="submitSignUp" >Sign Up</button>
+      <button class="g-recaptcha" data-sitekey="6Lf9VfQpAAAAAIUSqRRo0lPHSjem5r8JOde7XHpM" data-callback='onSubmit' data-action='submit' class="btn" id="submitSignUp" >Sign Up</button>
       </form>
       <div class="links">
         <button id="signInButton">Sign In</button>
@@ -58,7 +60,7 @@
           <p class="recover">
             <a href="#">Recover Password</a>
           </p>
-         <button  class="btn"  id="submitSignIn">Sign In</button>
+          <button class="g-recaptcha" data-sitekey="6Lf9VfQpAAAAAIUSqRRo0lPHSjem5r8JOde7XHpM" data-callback='onSubmit' data-action='submit' class="btn"  id="submitSignIn">Sign In</button>
         </form>
         <div class="links">
           <button id="signUpButton">Sign Up</button>

@@ -36,6 +36,7 @@ function showMessage(message, divId){
     const password=document.getElementById('rPassword').value;
     const firstName=document.getElementById('fName').value;
     const lastName=document.getElementById('lName').value;
+    const pwlength= password.length;
 
     const auth=getAuth();
     const db=getFirestore();
@@ -72,7 +73,7 @@ function showMessage(message, divId){
             showMessage('Email Address Already Exists !!!', 'signUpMessage');
         }
         else{
-            showMessage('unable to create User', 'signUpMessage');
+            showMessage('unable to create User, Please make sure your password lenght is over 6 chars', 'signUpMessage');
         }
     })
  });

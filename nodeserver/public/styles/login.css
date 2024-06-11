@@ -137,11 +137,11 @@ a {
 }
 
 .google-icon {
-    background-image: url("images/google.svg");
+    background-image: url("../images/google.svg");
 }
 
 .facebook-icon {
-    background-image: url("images/facebook.svg");
+    background-image: url("../images/facebook.svg");
 }
 
 .auth-btn {

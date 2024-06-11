@@ -1,15 +1,26 @@
+<!-- Layout for signin and signup forms -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join us</title>
+    <title> {{ title }} </title>
+
+          <!-- css files go here  -->
     <link rel="stylesheet" href="styles/login.css">
 </head>
-<body>
-     
 
- {% block content %} {% endblock %}
+<body>
     
+    <div class="container-form">
+        <div id="greet">Welcome Back</div>
+
+         <!-- The form goes here -->
+        {% block content %} {% endblock %}
+
+    </div>
+
+    <script src="scripts/sign.js"></script>
 </body>
 </html>

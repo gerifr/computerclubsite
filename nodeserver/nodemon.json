@@ -1,0 +1,10 @@
+{
+    "watch": [
+        "server.js",
+        "routes",
+        "views"
+    ],
+    "ext": "js,html,css",
+    "exec": "node server.js",
+    "restartable": "rsi"
+}

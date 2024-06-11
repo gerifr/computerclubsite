@@ -1,1 +1,2 @@
 js/dist/
+nodeserver/node__modules/*.*

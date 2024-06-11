@@ -1,26 +1,34 @@
-const express = require('express');
-const nunjucks = require('nunjucks');
+const express = require("express");
+const nunjucks = require("nunjucks");
+const bodyParser = require("body-parser");
 
 const app = express();
-const port = 3000; // The port number which the server will use
-
-//Import the routers 
-const homeRoute = require('./routes/home')
-
+const port = 3000;
 
 // Configure Nunjucks
-nunjucks.configure('views', {
-    autoescape: true,
-    express: app
+nunjucks.configure("views", {
+  autoescape: true,
+  express: app,
 });
 
+//Import the routers
+const homeRouter = require("./routes/home");
+const signinRouter = require("./routes/signin");
+
+//Load all the static files
+app.use(express.static("public"));
+
+//Parsing the forms
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // Set the view engine to html
-app.set('view engine', 'html');
+app.set("view engine", "html");
 
 // Responds and routes the http requests
-app.use('/', homeRoute)
+app.use("/", homeRouter);
+app.use("/signin", signinRouter);
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });

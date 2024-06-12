@@ -1,2 +1,7 @@
 js/dist/
-nodeserver/node__modules/*.*
+node_modules/
+nodemon.json
+livereload.js
+bs-config.js
+.idea
+.vscode

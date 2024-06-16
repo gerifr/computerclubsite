@@ -13,7 +13,7 @@ nunjucks.configure("views", {
 
 //Import the routers
 const homeRouter = require("./routes/home");
-const signinRouter = require("./routes/auth").default;
+const signinRouter = require("./routes/auth");
 
 //Load all the static files
 app.use(express.static("public"));

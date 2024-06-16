@@ -1,5 +1,5 @@
 const express = require("express");
-const FirebaseAuth = require("../controllers/fireAuth");
+const FirebaseAuth = require("../controller/fireAuth");
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -10,4 +10,4 @@ router.post("/signIn", (req, res) => FirebaseAuth.signIn(req, res));
 router.post("/signOut", (req, res) => FirebaseAuth.signUp(req, res));
 router.post("/resetPass", (req, res) => FirebaseAuth.resetPass(req, res));
 
-export default router;
+module.exports = router;

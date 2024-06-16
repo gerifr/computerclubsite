@@ -1,5 +1,5 @@
 const firebase = require("firebase/app");
-const admin = require("firebase-admin");
+
 const {
   getAuth,
   createUserWithEmailAndPassword,
@@ -8,12 +8,6 @@ const {
   sendEmailVerification,
   sendPasswordResetEmail,
 } = require("firebase/auth");
-
-const serviceAccount = require("../firebaseService.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
 
 const firebaseConfig = {
   apiKey: "AIzaSyAxCwtWGW4YLIgFBRHBdsTACrgbhjQm5o0",
@@ -34,5 +28,4 @@ module.exports = {
   signOut,
   sendEmailVerification,
   sendPasswordResetEmail,
-  admin,
 };

@@ -1,10 +1,11 @@
 const {
-  getAuth,
-  createUserWithEmailAndPassword,
+  auth,
   signInWithEmailAndPassword,
-} = require("../firebase/initFirebase");
-
-const auth = getAuth;
+  createUserWithEmailAndPassword,
+  signOut,
+  sendEmailVerification,
+  sendPasswordResetEmail,
+} = require("../fireFiles/initFirebase");
 
 const signIn = async (req, res) => {
   const { email, password } = req.body;

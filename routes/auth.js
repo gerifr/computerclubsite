@@ -1,28 +1,13 @@
-import { Router } from "express";
-import singInUser from "./controllers";
-const router = Router();
-
-const validate = (formdata) => {
-  email = formdata.email;
-  password = formdata.password;
-};
+const express = require("express");
+const FirebaseAuth = require("../controllers/fireAuth");
+const router = express.Router();
 
 router.get("/", (req, res) => {
   res.render("pages/signin");
 });
 
-router.post("/signIn", (req, res) => {
-  const formdata = req.body;
-  res.send(formdata);
-  console.log(formdata);
-
-  try {
-    validate(formdata);
-  } catch {}
-
-  signInUser(formdata);
-});
-
-router.post("/signOut", (req, res) => {});
+router.post("/signIn", (req, res) => FirebaseAuth.signIn(req, res));
+router.post("/signOut", (req, res) => FirebaseAuth.signUp(req, res));
+router.post("/resetPass", (req, res) => FirebaseAuth.resetPass(req, res));
 
 export default router;

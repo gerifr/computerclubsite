@@ -5,3 +5,5 @@ livereload.js
 bs-config.js
 .idea
 .vscode
+package.json
+package-lock.json

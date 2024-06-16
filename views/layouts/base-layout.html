@@ -6,16 +6,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ base.title }} </title>
+
+    <!-- link all the css files from here -->
+     <link rel="stylesheet" href="../../public/styles/general.css">
   </head>
   <body>
     <!-- includes the header or nav bar -->
-    {% include "pages/header.html" %} 
+    {% include "includes/header.html" %} 
 
     <!-- main body of the site -->
     {% block content %} {% endblock %}
 
     <!-- includes the footer or bottom bar -->
-    {% include "pages/footer.html" %}
+    {% include "includes/footer.html" %}
 
   </body>
 </html>

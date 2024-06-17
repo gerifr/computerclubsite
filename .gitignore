@@ -1,1 +1,9 @@
 js/dist/
+node_modules/
+nodemon.json
+livereload.js
+bs-config.js
+.idea
+.vscode
+package.json
+package-lock.json
